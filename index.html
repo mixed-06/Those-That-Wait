@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Real Estate Revolution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);
+        color: white;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background: radial-gradient(circle at 50% 50%, rgba(255, 165, 0, 0.1) 0%, transparent 50%);
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        animation: float 20s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        background: linear-gradient(135deg, #ff9500 0%, #ffb800 50%, #ffd700 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+        from { filter: drop-shadow(0 0 20px rgba(255, 184, 0, 0.3)); }
+        to { filter: drop-shadow(0 0 40px rgba(255, 184, 0, 0.6)); }
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+        opacity: 0.9;
+        max-width: 600px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 18px 40px;
+        background: linear-gradient(135deg, #ff9500 0%, #ffb800 100%);
+        color: black;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(255, 149, 0, 0.3);
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 40px rgba(255, 149, 0, 0.5);
+    }
+
+    /* Stats Section */
+    .stats {
+        padding: 100px 0;
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(10px);
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .stat-card {
+        text-align: center;
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 149, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 149, 0, 0.1);
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #ffb800;
+        margin-bottom: 10px;
+    }
+
+    .stat-label {
+        font-size: 1.1rem;
+        opacity: 0.8;
+    }
+
+    /* Strategy Section */
+    .strategy {
+        padding: 100px 0;
+    }
+
+    .section-title {
+        font-size: 3rem;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 60px;
+        background: linear-gradient(135deg, #fff 0%, #ffb800 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .strategy-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+    }
+
+    .strategy-card {
+        padding: 40px;
+        background: linear-gradient(135deg, rgba(255, 149, 0, 0.1) 0%, rgba(255, 184, 0, 0.05) 100%);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 149, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .strategy-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #ff9500, #ffb800, #ffd700);
+    }
+
+    .strategy-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #ffb800;
+    }
+
+    .strategy-card p {
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
+    /* Bitcoin Advantages */
+    .advantages {
+        padding: 100px 0;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    .advantage-item {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        border-left: 4px solid #ffb800;
+        transition: all 0.3s ease;
+    }
+
+    .advantage-item:hover {
+        background: rgba(255, 149, 0, 0.1);
+    }
+
+    .advantage-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #ff9500, #ffb800);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        font-size: 1.5rem;
+    }
+
+    .advantage-text {
+        flex: 1;
+    }
+
+    .advantage-title {
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: #ffb800;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 100px 0;
+        text-align: center;
+        background: linear-gradient(135deg, rgba(255, 149, 0, 0.1) 0%, rgba(45, 27, 105, 0.3) 100%);
+    }
+
+    .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .contact-card {
+        display: flex;
+        align-items: center;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 149, 0, 0.3);
+        transition: all 0.3s ease;
+        text-align: left;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 149, 0, 0.1);
+        box-shadow: 0 20px 40px rgba(255, 149, 0, 0.2);
+    }
+
+    .contact-icon {
+        font-size: 3rem;
+        margin-right: 20px;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #ff9500, #ffb800);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-info h3 {
+        color: #ffb800;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .contact-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .data-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 20px 35px;
+        background: linear-gradient(135deg, #2d1b69 0%, #4a0e4e 50%, #6b1e3c 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        border: 2px solid rgba(255, 149, 0, 0.3);
+        box-shadow: 0 10px 30px rgba(45, 27, 105, 0.3);
+    }
+
+    .data-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 40px rgba(45, 27, 105, 0.5);
+        border-color: rgba(255, 149, 0, 0.6);
+        background: linear-gradient(135deg, #3a2277 0%, #5a1a5c 50%, #7a2a4a 100%);
+    }
+
+    .data-icon {
+        font-size: 1.5rem;
+        margin-right: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 3rem;
+        }
+        
+        .strategy-grid,
+        .stats-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+        }
+    }
+
+    /* Scroll animations */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>The Future of Real Estate is Bitcoin</h1>
+                <p class="hero-subtitle">Join the revolution where property prices fall while your wealth grows. We're building tomorrow's neighborhoods with today's most powerful asset.</p>
+                <a href="#contact" class="cta-button">Secure Your Position</a>
+            </div>
+        </div>
+    </section>
+
+```
+<!-- Stats Section -->
+<section class="stats">
+    <div class="container">
+        <h2 class="section-title">The Opportunity</h2>
+        <div class="stats-grid">
+            <div class="stat-card fade-in">
+                <div class="stat-number">$100M</div>
+                <div class="stat-label">Joint Venture Funding Target</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number">50/50</div>
+                <div class="stat-label">Equal Partnership Split</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number">$200B</div>
+                <div class="stat-label">Projected Portfolio Value (30 years)</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number">30%</div>
+                <div class="stat-label">Annual Bitcoin Appreciation (Conservative)</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Strategy Section -->
+<section class="strategy">
+    <div class="container">
+        <h2 class="section-title">Revolutionary Investment Strategy</h2>
+        <div class="strategy-grid">
+            <div class="strategy-card fade-in">
+                <h3>🏗️ Perpetual Development Fund</h3>
+                <p>Fund new residential and commercial developments continuously for the next 20+ years. By 2054, we project enabling $2B+ of annual construction funded by just 1% of our Bitcoin reserves.</p>
+            </div>
+            <div class="strategy-card fade-in">
+                <h3>📉 Falling Prices, Rising Wealth</h3>
+                <p>As Bitcoin appreciates at 30% annually, development costs fall in Bitcoin terms. Already possible to borrow against Bitcoin at just 2% annually with no monthly fees through perpetual refinancing.</p>
+            </div>
+            <div class="strategy-card fade-in">
+                <h3>🏘️ Premium Properties at Scale</h3>
+                <p>Clone the most desirable pre-war properties and neighborhoods using UK-wide property heat mapping. Deliver contemporary improvements while maintaining the charm that creates lasting value.</p>
+            </div>
+            <div class="strategy-card fade-in">
+                <h3>🎯 Market Monopoly Strategy</h3>
+                <p>Secure planning consent nationwide by delivering all properties at cost. Future profits generated entirely through Bitcoin appreciation, creating an unbeatable competitive advantage.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bitcoin Advantages -->
+<section class="advantages">
+    <div class="container">
+        <h2 class="section-title">Why Bitcoin Wins</h2>
+        <div class="advantages-grid">
+            <div class="advantage-item fade-in">
+                <div class="advantage-icon">🔒</div>
+                <div class="advantage-text">
+                    <div class="advantage-title">Uninflatable Fixed Supply</div>
+                    <p>21 million Bitcoin maximum, forever</p>
+                </div>
+            </div>
+            <div class="advantage-item fade-in">
+                <div class="advantage-icon">🛡️</div>
+                <div class="advantage-text">
+                    <div class="advantage-title">Unhackable Security</div>
+                    <p>Secured by global energy network</p>
+                </div>
+            </div>
+            <div class="advantage-item fade-in">
+                <div class="advantage-icon">⚡</div>
+                <div class="advantage-text">
+                    <div class="advantage-title">Weightless & Portable</div>
+                    <p>No physical storage or transport costs</p>
+                </div>
+            </div>
+            <div class="advantage-item fade-in">
+                <div class="advantage-icon">💰</div>
+                <div class="advantage-text">
+                    <div class="advantage-title">Zero Maintenance Cost</div>
+                    <p>No taxes, protection, or decay like gold/real estate</p>
+                </div>
+            </div>
+            <div class="advantage-item fade-in">
+                <div class="advantage-icon">📊</div>
+                <div class="advantage-text">
+                    <div class="advantage-title">Self-Adjusting Interest Rate</div>
+                    <p>Organic monetary policy every 2 weeks</p>
+                </div>
+            </div>
+            <div class="advantage-item fade-in">
+                <div class="advantage-icon">🌍</div>
+                <div class="advantage-text">
+                    <div class="advantage-title">Global Value Store</div>
+                    <p>Growing from 1% to 50% of global capital by 2050</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="section-title">Ready to Build the Future?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">The data speaks for itself: house prices and development costs are already falling in Bitcoin terms. The earlier we secure unappreciated Bitcoin, the more homes we can build and the greater returns we can guarantee.</p>
+        
+        <div class="contact-methods">
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <div class="contact-info">
+                    <h3>Email</h3>
+                    <a href="mailto:ariel@thosethatwait.co.uk?subject=Bitcoin Real Estate Investment Inquiry&body=Hello,%0D%0A%0D%0AI am interested in learning more about your Bitcoin real estate investment opportunity. Please contact me to discuss further.%0D%0A%0D%0AThank you" class="contact-link">email@cheese.co.uk</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">📱</div>
+                <div class="contact-info">
+                    <h3>Phone</h3>
+                    <a href="tel:+447581323698" class="contact-link">+44 7982 345698</a>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 50px;">
+            <a href="#data-section" class="data-button">
+                <span class="data-icon">📊</span>
+                View the Data: House Prices Falling in Bitcoin Terms
+            </a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.6;">See Bitcoin's 4-year moving average trajectory and proven security over time</p>
+        </div>
+        
+        <p style="margin-top: 40px; opacity: 0.7;">Direct all inquiries here for immediate response</p>
+    </div>
+</section>
+
+<script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Fade in animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Contact link click tracking (optional)
+    document.querySelectorAll('.contact-link').forEach(link => {
+        link.addEventListener('click', function() {
+            console.log('Contact method clicked:', this.href);
+            // Add analytics tracking here if needed
+        });
+    });
+
+    // Parallax effect for hero background
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+    });
+</script>
+```
+
+</body>
+</html>
